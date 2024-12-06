@@ -1,0 +1,111 @@
+nav{
+  padding: 2rem;
+}
+.navinput{
+  width : 500px;
+  border:none;
+  padding: 7px;
+outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;  
+}
+.navform{
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 1rem auto;
+}
+
+
+
+
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.footer-content ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+.banner {
+  background: url('https://via.placeholder.com/1500x500') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+  position: relative;
+}
+
+.banner h2 {
+  font-size: 3rem;
+}
+.banner p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.banner button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.category-list {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+ 
+}
+.pop{
+  position: absolute;
+  z-index: 2;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category h4 {
+  font-size: 1.5rem;
+}
+
+.category button {
+  background-color: #ff9800;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
