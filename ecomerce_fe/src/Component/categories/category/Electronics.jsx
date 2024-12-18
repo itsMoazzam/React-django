@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Home = () => {
+const Electronics = () => {
   const [electronics, setElectronics] = useState([]);
 
   useEffect(() => {
@@ -10,6 +10,7 @@ const Home = () => {
       .then((data) => setElectronics(data))
       .catch((error) => console.error("Error fetching electronics:", error));
   }, []);
+
   return (
     <div>
       <div
@@ -21,7 +22,7 @@ const Home = () => {
           //   backgroundColor: "#f1f1"
         }}
       >
-        {electronics.map((item) => (
+        {electronics.slice(0, 20).map((item) => (
           <div
             key={item.id}
             style={{
@@ -41,7 +42,7 @@ const Home = () => {
               {item.brand} {item.model}
             </h3>
             <p>
-              <strong>Price:</strong> {item.price}
+              <strong>Price:</strong> {item.Price}
             </p>
             {/* <p>
               <strong>Specifications:</strong>
@@ -60,4 +61,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Electronics;

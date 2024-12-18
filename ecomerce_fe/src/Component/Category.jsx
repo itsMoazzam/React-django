@@ -1,11 +1,5 @@
-
-
 const Category = () => {
-  return (
-    <div>
-      this is category
-    </div>
-  )
-}
+  return <>Please select one;</>;
+};
 
-export default Category
+export default Category;

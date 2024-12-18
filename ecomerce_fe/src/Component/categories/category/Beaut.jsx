@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 
-const Home = () => {
+const Beaut = () => {
   const [electronics, setElectronics] = useState([]);
 
   useEffect(() => {
-    // Fetch data from the JSON file
     fetch("../../../../Electronics.json")
       .then((response) => response.json())
       .then((data) => setElectronics(data))
       .catch((error) => console.error("Error fetching electronics:", error));
   }, []);
+
   return (
     <div>
       <div
@@ -18,10 +18,9 @@ const Home = () => {
           flexWrap: "wrap",
           gap: "20px",
           margin: "18px"
-          //   backgroundColor: "#f1f1"
         }}
       >
-        {electronics.map((item) => (
+        {electronics.slice(59, 85).map((item) => (
           <div
             key={item.id}
             style={{
@@ -34,25 +33,14 @@ const Home = () => {
           >
             <img
               src={item.image}
-              alt={item.model}
+              alt={item.type}
               style={{ width: "100%", height: "250px", borderRadius: "8px" }}
             />
-            <h3>
-              {item.brand} {item.model}
-            </h3>
+            <h3>{item.brand}</h3>
+
             <p>
               <strong>Price:</strong> {item.price}
             </p>
-            {/* <p>
-              <strong>Specifications:</strong>
-            </p>
-            <ul>
-              {Object.entries(item.specifications).map(([key, value]) => (
-                <li key={key}>
-                  <strong>{key}:</strong> {value}
-                </li>
-              ))}
-            </ul> */}
           </div>
         ))}
       </div>
@@ -60,4 +48,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Beaut;
